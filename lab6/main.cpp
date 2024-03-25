@@ -8,12 +8,6 @@ using namespace std;
 #define MAX_SIZE 100
 
 
-
-void myFunction(){
-    //code to be executed 
-    cout << "I just got executed!"; 
-}
-
 void readMatrixFile(int matrix1[MAX_SIZE][MAX_SIZE], int matrix2[MAX_SIZE][MAX_SIZE], int &size, const char *filename){
     std::ifstream MyReadFile(filename); // read from the text file 
     
@@ -108,7 +102,7 @@ void transposeMatrix(int matrix[MAX_SIZE][MAX_SIZE], int size){
             dummyMatrix[j][i] = matrix[i][j];
         }
     }
-    
+
     for (int i = 0; i < size; i++){
         for (int j = 0; j < size; j++){
             matrix[i][j] = dummyMatrix[i][j];
